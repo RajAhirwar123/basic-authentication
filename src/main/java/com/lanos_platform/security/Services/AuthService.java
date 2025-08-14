@@ -40,8 +40,6 @@ public class AuthService {
         user.setUserName(userName);
         user.setEmail(email);
         user.setPassword(passwordEncoder.encode(password));
-
-        // Default username can be set if required, e.g., user.setUserName(email.split("@")[0]);
         
         userRepository.save(user);
         return "User registered successfully!" + email;
